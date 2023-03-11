@@ -1,3 +1,10 @@
+body {
+  background-color: #F5F5F5;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: bold;
+  height: 100vh;
+}
+
 .wrapper {
   max-width: 1920px;
   margin: 0 auto;
@@ -11,8 +18,7 @@
   }
 
 .background {
-  background-color: #757575;
-  background-size: cover;
+ background-size: cover;
 }  
 
 .position-text {
@@ -22,11 +28,60 @@
 
 .all-memes {
   overflow: hidden;
-  }
+  margin-left: 20%;
+  margin-right: 10%;
+      }
+
+/* .all-memes .mem-title {
+  color: rgb(140, 0, 255); */
+/* } */
+
+      
+.all-memes:hover .mem-title {
+  color: #000;
+}
 
 input {
   position: absolute;
   z-index: -1;
   opacity: 0;
+}
+
+input:checked ~ .content-picture {
+  max-height: 100vh;
+  transition: max-height 3s ease-out;
+}
+
+input:checked ~ .mem-title {
+    color: #000;
+}
+
+.mem {
+  border-top: 1px solid;
+  border-color: gray;
+}
+
+.mem:hover .content-picture {
+  max-height: 100vh;
+  transition: max-height 3s ease-out;
+}
+
+.mem-title {
+  color: rgb(140, 0, 255);
+  padding: 10px 0;
+  cursor: pointer;
+  display: block;
+}
+
+
+.content-picture {
+  max-height: 0px;
+  margin: 0 auto;
+  display: block;
+  transition: all 0.35s;
+  cursor: pointer;
+  background-position: center;
+  position: relative;
+  overflow: hidden;
 }
 
