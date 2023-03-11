@@ -90,12 +90,14 @@ input:checked ~ .mem-title {
   background-position: center;
   position: relative;
   overflow: hidden;
+  margin: 0 auto;
+  max-width: 50%;
 }
 
 .content-picture img {
-  margin: 0 auto;
-  display: block;
   transform: scale(0);  
   margin-bottom: 20px;
   margin-top: 5px;
+  max-height: 100%;
+  max-width: 100%;
 }
