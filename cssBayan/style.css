@@ -49,7 +49,7 @@ input {
 
 input:checked ~ .content-picture {
   max-height: 100vh;
-  transition: max-height 3s ease-out;
+  transition: max-height 1s ease-out;
 }
 
 input:checked ~ .mem-title {
@@ -57,27 +57,34 @@ input:checked ~ .mem-title {
 }
 
 .mem {
-  border-top: 1px solid;
-  border-color: gray;
+  border-top: 1px solid gray;
+  /* border-color: gray/; */
 }
 
 .mem:hover .content-picture {
   max-height: 100vh;
-  transition: max-height 3s ease-out;
+  transition: max-height 1s ease-out;
+}
+
+.mem:hover .content-picture img, input:checked ~ .content-picture img {
+  transition: transform 1s ease-out;
+  transform: scale(1);  
 }
 
 .mem-title {
   color: rgb(140, 0, 255);
+  display: flex;
   padding: 10px 0;
   cursor: pointer;
-  display: block;
+  justify-content: space-between;
 }
-
+ input:checked ~ .mem-title span, .mem:hover .mem-title span {
+  transform: rotate(45deg);
+  transition: transform 0.5s ease-in;
+ }
 
 .content-picture {
   max-height: 0px;
-  margin: 0 auto;
-  display: block;
   transition: all 0.35s;
   cursor: pointer;
   background-position: center;
@@ -85,3 +92,10 @@ input:checked ~ .mem-title {
   overflow: hidden;
 }
 
+.content-picture img {
+  margin: 0 auto;
+  display: block;
+  transform: scale(0);  
+  margin-bottom: 20px;
+  margin-top: 5px;
+}
